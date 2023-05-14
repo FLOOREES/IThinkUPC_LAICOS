@@ -1,10 +1,10 @@
 # IThinkUPC_LAICOS
 LAICOS - by Pau Hidalgo Pujol, Adrià Flores Albó and Pablo Barrenechea Perea.
 
-To use this project you need to install the required modules.
+To use this project, you need to install the required modules.
 
-Additionally, use this command in the property folder:
+Additionally, navigate to the project folder and run the following command:
 
   - python manage.py runserver 
  
-Finally, open the server and enjoy the web.
+Finally, open your web browser and access the server to enjoy the web application.
