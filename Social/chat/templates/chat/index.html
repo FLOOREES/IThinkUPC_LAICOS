@@ -1,0 +1,22 @@
+<!-- chat/templates/chat/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+</head>
+<body>
+    <p id="room-name"> {{cluster}} </p>
+    <p id="user-name"> "{{user}}" </p>
+
+    <script>
+        
+        var roomName = document.querySelector('#room-name').value;
+        var userName = document.querySelector('#user-name').textContent;
+
+        
+        window.location.pathname = '/chat/' + {{cluster}} ;
+        
+    </script>
+</body>
+</html>

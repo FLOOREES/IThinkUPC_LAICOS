@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+.buto{   
+  background-color: rgba(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+.cos{
+    height: 100%;
+}
+.start{
+    border-radius: 50%;
+    width: 40vh;
+    height: 40vh;
+}
+
+.bunav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.bunav:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+  </style>
+</head>
+<body>
+
+ 
+<base href="/" />
+  <div class="main text-center py-3">
+    <h1>Social</h1>
+
+    <h3>Welcome!</h3>
+  
+    <p>Please answer this questions about your preferences</a></p>
+  </div>
+<div class="uauth text-center">
+    {% if user.is_authenticated %}
+    {% else %}
+      <p>You are not logged in</p>
+      <a href="/login">Log In</a>
+    {% endif %}
+
+<div class="container my-4">
+    <div class="row text-center">
+        <div class="col align-middle">
+        </div>
+    </div>
+</div>
+<div class="container cos">
+        <div class="row text-center">
+            <div class="col-sm align-middle">
+                
+            </div>
+            <div class="col-sm align-middle" >
+              <form id="form" action = "" method = "POST">
+                {% csrf_token %}
+                <!-- Details -->
+                <div class="form-control">
+                    <label for="name" id="label-name" >
+                        Name
+                    </label>
+         
+                    <!-- Input Type Text -->
+                    <input type="text"
+                           id="name"
+                           name = "name"
+                           placeholder="Enter your name" 
+                           required/>
+                </div>
+                <div class="form-control">
+                  <label for="age" id="label-age" >
+                      Age
+                  </label>
+       
+                  <!-- Input Type Text -->
+                  <input type="number"
+                         id="name"
+                         name = "age"
+                         placeholder=18
+                         min="16" max="100"
+                         required/>
+              </div>
+
+              <div class="form-control">
+                <label for="degree" id="label-degree">
+                    Which degree are you studying?
+                </label>
+                 
+                <!-- Dropdown options -->
+                <select name="degree" id="role"required>
+                    <option value="GIA">GIA</option>
+                    <option value="GEI">GEI</option>
+                    <option value="GCED">
+                        GCED
+                    </option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+          
+                <div class="form-control">
+                    <label for="music" id="label-music">
+                        Which music genre do you like the most?
+                    </label>
+                     
+                    <!-- Dropdown options -->
+                    <select name="music" id="role" required>
+                        <option value="pop">Pop</option>
+                        <option value="reggaeton">Reggaeton</option>
+                        <option value="rock">
+                            Rock
+                        </option>
+                        <option value="techno">
+                          Techno
+                      </option>
+                      <option value="jazz">
+                        Jazz
+                    </option>
+                    <option value="classical">
+                      Classical
+                  </option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+          
+                <div class="form-control">
+                  <label for="sport" id="label-sport" >
+                    Sport
+                  </label>
+                  <!-- Input Type Text -->
+                  <input type="number"
+                        id="sport"
+                        name = "sport"
+                        placeholder=5
+                        min="1" max="10"
+                        required/>
+                </div>
+                <div class="form-control">
+                  <label for="read" id="label-read" >
+                    Read
+                  </label>
+                  <!-- Input Type Text -->
+                  <input type="number"
+                        id="read"
+                        name = "read"
+                        placeholder=5
+                        min="1" max="10"
+                        required/>
+                </div>
+                <div class="form-control">
+                  <label for="board" id="label-board" >
+                    Board Games
+                  </label>
+                  <!-- Input Type Text -->
+                  <input type="number"
+                        id="board"
+                        name = "board"
+                        placeholder=5
+                        min="1" max="10"
+                        required/>
+                </div>
+                <!-- Multi-line Text Input Control -->
+                <p>
+
+                </p>
+                <button class= "btn btn-success" type="submit" value="submit" href="main/">
+                    Submit
+                </button>
+            </form>
+            </div>
+            <div class="col-sm align-middle">
+                 
+            </div>
+    </div>
+</div>
+
+
+</body>
+</html>

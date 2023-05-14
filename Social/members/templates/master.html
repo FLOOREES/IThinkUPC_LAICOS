@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+
+.buto{   
+  background-color: rgba(51, 51, 51);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+.cos{
+    height: 100%;
+
+}
+.start{
+    border-radius: 50%;
+    width: 40vh;
+    height: 40vh;
+}
+
+.bunav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.bunav:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+  </style>
+
+  
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+    <nav class="navbar navbar-expand-lg bg-primary fixed-bottom p-4 justify-content-center">
+
+        <a class="btn bunav me-2 align-middle" type="button" href="/chat">Chat</a>
+        <a class="btn bunav me-2 align-middle" type="button" href="/">Home</a>
+        <a class="btn bunav me-2 align-middle" type="button" href="/logout">Logout</a>
+        <a class="btn bunav me-2 align-middle" type="button" href="/generate">Generate_random_members</a>
+        <a class="btn bunav me-2 align-middle" type="button" href="/clear">Clear members</a>
+        
+        {% for x in mymembers %}
+        {% if x.firstname == user.firstname %}
+        <a class="btn bunav me-2 align-middle" type="button" href="/details/{{ x.slug }}">Profile</a>
+        {% endif %}
+        {% endfor %}
+      </nav>
+
+
+
+</body>
+</html>

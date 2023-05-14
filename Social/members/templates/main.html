@@ -1,0 +1,47 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club
+{% endblock %}
+
+{% block content %}
+<base href="/" />
+  <div class="main text-center py-3">
+    <h1>Social</h1>
+
+    <h3> Helooo {{user.username}}</h3>
+  
+    <p>Check out all our <a href="members/">members</a></p>
+  </div>
+<div class="uauth text-center">
+
+</div>
+
+
+
+</div>
+<div class="container my-4">
+    <div class="row text-center">
+        <div class="col align-middle">
+        </div>
+    </div>
+</div>
+<div class="container cos">
+        <div class="row text-center">
+            <div class="col-sm align-middle">
+                
+            </div>
+            <div class="col-sm align-middle">
+              <form action="/myscript/" method="post">
+                {% csrf_token %}
+                <button type="submit" class="start">Let's goo</button>
+            </form>
+            </div>
+            <div class="col-sm align-middle">
+                 
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+

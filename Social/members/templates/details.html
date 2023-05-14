@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.music }}
+{% endblock %}
+
+{% block content %}
+  <div class="mycard p-5 m-4">
+    <h1>{{ mymember.firstname }} {{ mymember.music }}</h1>
+    <p>Age: {{ mymember.age }}</p>
+    <p>Degree: {{mymember.degree}} </p>
+    <p>Music preference: {{ mymember.music }}</p>
+    <p>Sport: {{mymember.sport}} </p>
+    <p>Read: {{mymember.read}}</p>
+    <p>Board games: {{ mymember.board_games }}</p>
+  </div>
+{% endblock %}  

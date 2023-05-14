@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Resultado
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Registro en Franja Horaria de Estudio</h1>
+    <form action="{% url 'register_study_slot' %}" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="study_slot">Seleccione una franja horaria:</label>
+        <select name="study_slot" id="study_slot" class="form-control">
+          <option value="morning">09:00-14:00</option>
+          <option value="afternoon">15:00-21:00</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+    
+    <a href="{% url 'main' %}" class="btn btn-secondary mt-3">Volver a la página principal</a>
+  </div>
+{% endblock %}

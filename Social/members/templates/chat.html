@@ -1,0 +1,50 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Tennis Club
+{% endblock %}
+
+{% block content %}
+<base href="/" />
+  <div class="main text-center">
+    <h1>Social</h1>
+
+    <h3>Members</h3>
+  
+    <p>Check out all our <a href="members/">members</a></p>
+  </div>
+<div class="uauth text-center">
+    {% if user.is_authenticated %}
+  
+    {% else %}
+      <p>You are not logged in</p>
+      <a href="/login">Log In</a>
+    {% endif %}
+
+</div>
+
+
+
+</div>
+<div class="container my-4">
+    <div class="row text-center">
+        <div class="col align-middle">
+        </div>
+    </div>
+</div>
+<div class="container cos">
+        <div class="row text-center">
+            <div class="col-sm align-middle">
+                
+            </div>
+            <div class="col-sm align-middle">
+                <button class="start"> Let's goo</button>
+            </div>
+            <div class="col-sm align-middle">
+                 
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+
