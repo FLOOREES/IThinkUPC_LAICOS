@@ -3,7 +3,7 @@ LAICOS - by Pau Hidalgo Pujol, Adrià Flores Albó and Pablo Barrenechea Perea.
 
 To use this project you need to install the required modules.
 
-Additionally, use this command in the property folder
+Additionally, use this command in the property folder:
 
   - python manage.py runserver 
  
