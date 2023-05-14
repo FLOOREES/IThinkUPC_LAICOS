@@ -1,2 +1,2 @@
 # IThinkUPC_LAICOS
-LAICOS - by Pau Hidalgo Pujo, Adrià Flores Albó and Pablo Barrenechea Perea.
+LAICOS - by Pau Hidalgo Pujol, Adrià Flores Albó and Pablo Barrenechea Perea.
