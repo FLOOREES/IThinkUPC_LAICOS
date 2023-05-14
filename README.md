@@ -5,6 +5,6 @@ To use this project you need to install the required modules.
 
 Additionally, use this command in the property folder
 
-  - python manage.py runserver - 
+  - python manage.py runserver 
  
 Finally, open the server and enjoy the web.
